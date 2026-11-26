@@ -137,7 +137,7 @@ describe("parseSourceId", () => {
     expect(parseSourceId("WINDOW:0x1a")).toEqual({ kind: "window", id: 26 });
     expect(parseSourceId("Window:0x1a")).toEqual({ kind: "window", id: 26 });
   });
-});
+
   it("reads window ids in hex or decimal", () => {
     expect(parseSourceId("window:0x1a00003")).toEqual({ kind: "window", id: 0x1a00003 });
     expect(parseSourceId("window:27262979")).toEqual({ kind: "window", id: 27262979 });
@@ -146,6 +146,7 @@ describe("parseSourceId", () => {
   it("rejects anything else", () => {
     expect(() => parseSourceId("screen-1")).toThrow(/unknown capture source/);
   });
+});
 
 
 /** A fake runner answering by command name. */
