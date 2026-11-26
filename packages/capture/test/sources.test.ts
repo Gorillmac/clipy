@@ -146,7 +146,7 @@ describe("parseSourceId", () => {
   it("rejects anything else", () => {
     expect(() => parseSourceId("screen-1")).toThrow(/unknown capture source/);
   });
-});
+
 
 /** A fake runner answering by command name. */
 function fakeRunner(answers: Record<string, Partial<RunResult>>): Runner {
