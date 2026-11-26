@@ -143,7 +143,7 @@ describe("parseSourceId", () => {
     expect(parseSourceId("window:27262979")).toEqual({ kind: "window", id: 27262979 });
   });
 
-  it("rejects anything else", () => {
+    it("rejects anything else", () => {
     expect(() => parseSourceId("screen-1")).toThrow(/unknown capture source/);
   });
 });
